@@ -10,7 +10,8 @@ void main() {
         activeIndex: 0,
         controller: controller,
         itemCount: 10,
-        scrollDirection: Axis.horizontal);
+        scrollDirection: Axis.horizontal,
+        pageController: PageController());
 
     Key key = new UniqueKey();
     await tester.pumpWidget(new MaterialApp(
@@ -46,7 +47,8 @@ void main() {
         activeIndex: 0,
         controller: controller,
         itemCount: 10,
-        scrollDirection: Axis.vertical);
+        scrollDirection: Axis.vertical,
+        pageController: PageController());
 
     Key key = new UniqueKey();
     await tester.pumpWidget(new MaterialApp(
@@ -82,7 +84,8 @@ void main() {
         activeIndex: 0,
         controller: controller,
         itemCount: 10,
-        scrollDirection: Axis.horizontal);
+        scrollDirection: Axis.horizontal,
+        pageController: PageController());
 
     Key key = new UniqueKey();
     await tester.pumpWidget(new MaterialApp(
@@ -108,7 +111,8 @@ void main() {
         activeIndex: 0,
         controller: controller,
         itemCount: 10,
-        scrollDirection: Axis.vertical);
+        scrollDirection: Axis.vertical,
+        pageController: PageController());
 
     Key key = new UniqueKey();
     await tester.pumpWidget(new MaterialApp(

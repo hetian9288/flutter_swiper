@@ -13,7 +13,7 @@ abstract class SwiperPlugin {
 class SwiperPluginConfig {
   final int activeIndex;
   final int itemCount;
-  final PageIndicatorLayout indicatorLayout;
+  final PageIndicatorLayout? indicatorLayout;
   final Axis scrollDirection;
   final bool loop;
   final bool outer;
@@ -21,18 +21,17 @@ class SwiperPluginConfig {
   final SwiperController controller;
   final SwiperLayout layout;
 
-  const SwiperPluginConfig(
-      {this.activeIndex,
-      this.itemCount,
-      this.indicatorLayout,
-      this.outer,
-      this.scrollDirection,
-      this.controller,
-      this.pageController,
-      this.layout,
-      this.loop})
-      : assert(scrollDirection != null),
-        assert(controller != null);
+  const SwiperPluginConfig({
+    this.activeIndex = 0,
+    this.itemCount = 0,
+    this.indicatorLayout,
+    this.outer = false,
+    required this.scrollDirection,
+    required this.controller,
+    required this.pageController,
+    this.layout = SwiperLayout.DEFAULT,
+    this.loop = false,
+  });
 }
 
 class SwiperPluginView extends StatelessWidget {

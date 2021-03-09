@@ -7,11 +7,13 @@ void main() {
     SwiperController controller = new SwiperController();
 
     SwiperPluginConfig config = new SwiperPluginConfig(
-        activeIndex: 0,
-        controller: controller,
-        itemCount: 10,
-        loop: true,
-        scrollDirection: Axis.horizontal);
+      activeIndex: 0,
+      controller: controller,
+      itemCount: 10,
+      loop: true,
+      scrollDirection: Axis.horizontal,
+      pageController: PageController(),
+    );
 
     Key key = new UniqueKey();
     await tester.pumpWidget(new MaterialApp(
@@ -42,7 +44,7 @@ void main() {
         controller: controller,
         itemCount: 10,
         loop: true,
-        scrollDirection: Axis.vertical);
+        scrollDirection: Axis.vertical, pageController: PageController());
 
     Key key = new UniqueKey();
     await tester.pumpWidget(new MaterialApp(

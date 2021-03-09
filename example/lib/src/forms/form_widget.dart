@@ -6,7 +6,7 @@ class FormWidget extends StatelessWidget {
 
   final Widget child;
 
-  FormWidget({this.label, this.child});
+  FormWidget({required this.label, required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,11 @@ class FormSelect<T> extends StatefulWidget {
   final List<dynamic> values;
   final dynamic value;
 
-  FormSelect({this.placeholder, this.valueChanged, this.value, this.values});
+  FormSelect(
+      {required this.placeholder,
+      required this.valueChanged,
+      required this.value,
+      required this.values});
 
   @override
   State<StatefulWidget> createState() {
@@ -116,7 +120,12 @@ class NumberPad extends StatelessWidget {
   final num min;
   final ValueChanged<num> onChangeValue;
 
-  NumberPad({this.number, this.step, this.onChangeValue, this.max, this.min});
+  NumberPad(
+      {required this.number,
+      required this.step,
+      required this.onChangeValue,
+      required this.max,
+      required this.min});
 
   void onAdd() {
     onChangeValue(number + step > max ? max : number + step);
