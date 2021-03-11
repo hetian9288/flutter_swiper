@@ -377,7 +377,7 @@ abstract class _SwiperTimerMixin extends State<Swiper> {
 class _SwiperState extends _SwiperTimerMixin {
   late int _activeIndex;
 
-  late TransformerPageController? _pageController;
+  TransformerPageController? _pageController;
 
   Widget _wrapTap(BuildContext context, int index) {
     assert(widget.itemBuilder != null);

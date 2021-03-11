@@ -7,7 +7,7 @@ abstract class _CustomLayoutStateBase<T extends _SubSwiper> extends State<T>
   late Animation<double> _animation;
   late AnimationController _animationController;
   late int _startIndex;
-  late int? _animationCount;
+  int? _animationCount;
 
   @override
   void initState() {
